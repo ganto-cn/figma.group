@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header,
+        footer{
+            height: 1000px;
+        }
+        header{
+            background-color: rgb(171, 253, 226);
+        }
+        footer{
+            background-color: rgb(255, 218, 171);
+        }
+        main{
+            padding: 500px 0;
+            position: relative;
+            overflow: hidden;
+            color: #11140F;
+        }
+        main .top{
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            text-align: center;
+            position: relative;
+            z-index: 3;
+        }
+        main .top h1{
+            font-weight: 350;
+            font-size: 96px;
+            margin-bottom: 32px;
+        }
+        main .top p{
+            width: 100%;
+            max-width: 400px;
+            font-weight: 350;
+            font-size: 24px;
+            margin: auto;
+        }
+        main .middle{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 32px 0 24px;
+            position: relative;
+            z-index: 2;
+        }
+        main .middle .img_box{
+            width: 100%;
+            max-width: 414px;
+            position: relative;
+        }
+        main .middle .img_box .img_bgc{
+            width: 316px;
+            height: 198px;
+            background: linear-gradient(180deg, #d2fc61, #d2fc61);
+            position: absolute;
+            top: 16px;
+            left: 49px;
+            transition: all 1s;
+        }
+        .b_img_bgc{
+            background: linear-gradient(180deg, #dbfa86, #FFFFFF) !important;
+        }
+        main .middle .bgc{
+            content: "";
+            display: inline-block;
+            width: 316px;
+            height: 198px;
+            position: absolute;
+            top: 16px;
+            /* background-image: linear-gradient(180deg, #d2fc61, #d2fc61); */
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main .middle .bgc .tx_box{
+            width: 373%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            position: relative;
+        }
+        main .middle .bgc .tx_box .round_00{
+            background-image: url(images/Group\ 7738.webp);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 300px;
+            height: 389px;
+        }
+        main .middle .bgc .tx_box .bb{
+            display: flex;
+            gap: 12.5px;
+        }
+        main .middle .bgc .tx_box .round_01{
+            width: 127.56px;
+            height: 150.52px;
+            /* background: linear-gradient(267.2deg, #3E4233 25.28%, #A6C05F 119.46%); */
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+            background: rgba(17, 20, 15, 0.2);
+            border-radius: 50%;
+            transition: all 1s;
+        }
+        .t_round_01{
+            background: linear-gradient(267.2deg, #3E4233 25.28%, #A6C05F 119.46%) !important;
+        }
+        main .middle .bgc .tx_box .round_02{
+            width: 71.48px;
+            height: 150.52px;
+            /* background: #B1D871; */
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+            background: rgba(17, 20, 15, 0.5);
+            border-radius: 50%;
+            transition: all 1s;
+        }
+        .t_round_02{
+            background: #B1D871 !important;
+        }
+        main .middle .bgc .tx_box .round_03{
+            width: 47.05px;
+            height: 150.52px;
+            /* background: #D2FC61; */
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+            background: #3E4233;
+            border-radius: 50%;
+            transition: all 1s;
+        }
+        .t_round_03{
+            background: #D2FC61 !important;
+        }
+        main .middle .bgc .tx_box .round_04{
+            width: 47.05px;
+            height: 150.52px;
+            /* background: #D2FC61; */
+            background: #3E4233;
+            border-radius: 50%;
+            transition: all 1s;
+        }
+        .t_round_04{
+            background: #D2FC61 !important;
+        }
+        main .middle .bgc .tx_box .round_05{
+            width: 71.48px;
+            height: 150.52px;
+            /* background: #B1D871; */
+            background: rgba(17, 20, 15, 0.5);
+            border-radius: 50%;
+            transition: all 1s;
+        }
+        .t_round_05{
+            background: #B1D871 !important;
+        }
+        main .middle .bgc .tx_box .round_06{
+            width: 127.56px;
+            height: 150.52px;
+            /* background: linear-gradient(267.2deg, #3E4233 25.28%, #A6C05F 119.46%); */
+            background: rgba(17, 20, 15, 0.2);
+            border-radius: 50%;
+            transition: all 1s;
+        }
+        .t_round_06{
+            background: linear-gradient(267.2deg, #3E4233 25.28%, #A6C05F 119.46%) !important;
+        }
+        main .middle .bgc .tx_box .round_07{
+            background-image: url(images/Group\ 7738.webp);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            transform: rotate(180deg);
+            width: 300px;
+            height: 389px;
+        }
+        main .middle .img_box img{
+            width: 100%;
+        }
+        main .bottom{
+            position: relative;
+            z-index: 1;
+        }
+        main .bottom p{
+            font-weight: 350;
+            font-size: 12px;
+            color: #000000;
+            opacity: 0.3;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        main .bottom .btns{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        main .bottom .btns .btn{
+            padding: 25px 32px;
+            border: 1px solid red;
+            border-radius: 10px;
+            color: #000000;
+            text-decoration: none;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="top">
+            <h1>Start Trading</h1>
+            <p>Or sign up for your demo account to practise with virtual funds.</p>
+        </div>
+        <div class="middle">
+            <div class="img_box">
+                <img src="images/UltimaMarkets MacBook Pro 1.webp" alt="">
+                <div class="img_bgc"></div>
+            </div>
+            <div class="bgc">
+                <div class="tx_box">
+                    <div class="round round_00"></div>
+                    <div class="bb">
+                        <div class="round round_01"></div>
+                        <div class="round round_02"></div>
+                        <div class="round round_03"></div>
+                        <div class="round round_04"></div>
+                        <div class="round round_05"></div>
+                        <div class="round round_06"></div>
+                    </div>
+                    <div class="round round_07"></div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <p>Rendered video to be included into thisd laptop</p>
+            <div class="btns">
+                <a href="#" class="btn btn_01">Start trading</a>
+                <a href="#" class="btn btn_02">Open demo account</a>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        $(function() {
+            let flag = true;
+            let windowWidth = $(window).width();
+            $("main .middle").click(function() {
+                if(flag) {
+                    flag = !flag;
+                    windowWidth = $(window).width();
+                    if(windowWidth > 1512) {
+                        windowWidth = 1512
+                    }
+                    let w = windowWidth / 414;
+                    $("main .middle .img_box").stop().animate({scale: w+0.1, top: "-45px"}, 1000)
+                    $("main .top").stop().animate({top: "-40px"}, 1000)
+                    $("main .bottom").stop().animate({top: "40px"}, 1000)
+                    $("main .middle .bgc").stop().animate({width: "62.4%", height: "389px"}, 1000)
+                    $("main .middle .img_box .img_bgc").addClass("b_img_bgc")
+
+                    $("main .middle .bgc .tx_box .round_01").addClass("t_round_01");
+                    $("main .middle .bgc .tx_box .round_02").addClass("t_round_02");
+                    $("main .middle .bgc .tx_box .round_03").addClass("t_round_03");
+                    $("main .middle .bgc .tx_box .round_04").addClass("t_round_04");
+                    $("main .middle .bgc .tx_box .round_05").addClass("t_round_05");
+                    $("main .middle .bgc .tx_box .round_06").addClass("t_round_06");
+
+                } else {
+                    flag = !flag;
+                    $("main .middle .img_box").stop().animate({scale: "1", top: "0"}, 1000);
+                    $("main .top").stop().animate({top: "0"}, 1000)
+                    $("main .bottom").stop().animate({top: "0"}, 1000)
+                    $("main .middle .bgc").stop().animate({width: "316px", height: "198px"}, 1000)
+                    $("main .middle .img_box .img_bgc").removeClass("b_img_bgc")
+
+                    $("main .middle .bgc .tx_box .round_01").removeClass("t_round_01");
+                    $("main .middle .bgc .tx_box .round_02").removeClass("t_round_02");
+                    $("main .middle .bgc .tx_box .round_03").removeClass("t_round_03");
+                    $("main .middle .bgc .tx_box .round_04").removeClass("t_round_04");
+                    $("main .middle .bgc .tx_box .round_05").removeClass("t_round_05");
+                    $("main .middle .bgc .tx_box .round_06").removeClass("t_round_06");
+
+                }
+            })
+        })
+    </script>
+</body>
+</html>
